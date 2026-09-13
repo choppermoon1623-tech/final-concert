@@ -41,6 +41,24 @@
   .body { font-size: 15px; line-height: 1.95; color: #cfd4e0; text-wrap: pretty; }
   @keyframes rise { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
 
+  /* 曲目（曲順＋参考音源） */
+  .songs { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; }
+  .song { display: grid; grid-template-columns: 30px 1fr auto; gap: 12px; align-items: center; padding: 14px 0; border-bottom: 1px solid rgba(255,255,255,.08); }
+  .song:last-child { border-bottom: none; }
+  .song-no { font-family: 'Shippori Mincho B1', serif; font-size: 24px; font-weight: 800; line-height: 1; color: #c9a227; text-align: center; font-variant-numeric: tabular-nums; }
+  .song-t { font-size: 16px; line-height: 1.6; }
+  .song-n { font-size: 13px; line-height: 1.7; color: #a9b0c4; margin-top: 2px; }
+  .yt { display: inline-flex; align-items: center; gap: 7px; padding: 8px 12px; font-size: 13px; font-weight: 700; color: #e8e6e0; white-space: nowrap; text-decoration: none; background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.18); border-radius: 999px; }
+  .yt:hover { color: #fff; background: rgba(255,0,51,.18); border-color: rgba(255,0,51,.6); }
+  .yt i { width: 20px; height: 14px; border-radius: 4px; background: #ff0033; position: relative; flex: none; }
+  .yt i::after { content: ""; position: absolute; left: 8px; top: 4px; border-style: solid; border-width: 3px 0 3px 5px; border-color: transparent transparent transparent #fff; }
+  @media (max-width: 400px) {
+    .song { grid-template-columns: 20px 1fr auto; gap: 10px; }
+    .song-no { font-size: 21px; }
+    .song-t { font-size: 15px; }
+    .yt { gap: 5px; padding: 7px 9px; font-size: 12px; }
+  }
+
   /* 祝50名達成 */
   .fifty { position: relative; overflow: hidden; padding: 40px 24px 36px; background: radial-gradient(120% 90% at 50% 38%, #2a2410 0%, #161a26 55%, #0d1220 100%); border-bottom: 1px solid rgba(201,162,39,.35); text-align: center; }
   .fifty::before { content: ""; position: absolute; left: 50%; top: 40%; width: 720px; height: 720px; margin: -360px 0 0 -360px; background: repeating-conic-gradient(rgba(230,196,83,.10) 0deg 7deg, transparent 7deg 20deg); -webkit-mask: radial-gradient(circle, #000 12%, transparent 62%); mask: radial-gradient(circle, #000 12%, transparent 62%); animation: rays 40s linear infinite; pointer-events: none; }
@@ -152,22 +170,25 @@
 
   <section class="sec">
     <div class="rule"><span></span><h2>第2部の曲目</h2></div>
-    <div style="font-size:13px;color:#8b93a8;line-height:1.8;margin-top:-8px">演奏する曲が決まりました。曲順は未定です（下の並びは順番ではありません）。</div>
-    <div style="display:flex;flex-direction:column;gap:2px">
-      <div style="display:grid;grid-template-columns:22px 1fr;gap:10px;align-items:baseline;padding:15px 0;border-bottom:1px solid rgba(255,255,255,.08)"><div style="color:#c9a227;font-size:13px">●</div><div><div style="font-size:16px;line-height:1.6">paradise has no border</div><div style="font-size:13px;line-height:1.7;color:#a9b0c4;margin-top:3px">渡會先生　指揮</div></div></div>
-      <div style="display:grid;grid-template-columns:22px 1fr;gap:10px;align-items:baseline;padding:15px 0;border-bottom:1px solid rgba(255,255,255,.08)"><div style="color:#c9a227;font-size:13px">●</div><div><div style="font-size:16px;line-height:1.6">ディスコ・パーティー</div><div style="font-size:13px;line-height:1.7;color:#a9b0c4;margin-top:3px">佐土先生　指揮</div></div></div>
-      <div style="display:grid;grid-template-columns:22px 1fr;gap:10px;align-items:baseline;padding:15px 0;border-bottom:1px solid rgba(255,255,255,.08)"><div style="color:#c9a227;font-size:13px">●</div><div><div style="font-size:16px;line-height:1.6">オーメンズ・オブ・ラブ</div></div></div>
-      <div style="display:grid;grid-template-columns:22px 1fr;gap:10px;align-items:baseline;padding:15px 0;border-bottom:1px solid rgba(255,255,255,.08)"><div style="color:#c9a227;font-size:13px">●</div><div><div style="font-size:16px;line-height:1.6">愛するデューク</div></div></div>
-      <div style="display:grid;grid-template-columns:22px 1fr;gap:10px;align-items:baseline;padding:15px 0;border-bottom:1px solid rgba(255,255,255,.08)"><div style="color:#c9a227;font-size:13px">●</div><div><div style="font-size:16px;line-height:1.6">詩的なアリア</div><div style="font-size:13px;line-height:1.7;color:#a9b0c4;margin-top:3px">伊勢さん　ホルン協奏曲</div></div></div>
-      <div style="display:grid;grid-template-columns:22px 1fr;gap:10px;align-items:baseline;padding:15px 0;border-bottom:1px solid rgba(255,255,255,.08)"><div style="color:#c9a227;font-size:13px">●</div><div><div style="font-size:16px;line-height:1.6">未来予想図Ⅱ</div><div style="font-size:13px;line-height:1.7;color:#a9b0c4;margin-top:3px">小林先生　指揮</div></div></div>
-    </div>
+    <div style="font-size:13px;color:#8b93a8;line-height:1.8;margin-top:-8px">曲順が決まりました。下の並びが本番の演奏順です。</div>
     <div style="padding:14px 16px;background:rgba(201,162,39,.09);border:1px solid rgba(201,162,39,.35);border-radius:4px;display:flex;flex-direction:column;gap:6px">
-      <div style="font-size:15px;font-weight:700;color:#e6c453;line-height:1.6">曲順は決まりしだいお知らせします。</div>
-      <div style="font-size:14px;line-height:1.85;color:#cfd4e0"><b style="color:#e6c453">佐土先生のご出演が決まり、「ディスコ・パーティー」は佐土先生の指揮で演奏します。</b><br />また、検討していた「ディズニーメドレー」は演奏しないことになり、かわりに小林先生の指揮で「未来予想図Ⅱ」を演奏します。曲順が決まりしだい、LINEグループでお知らせします。</div>
+      <div style="font-size:15px;font-weight:700;color:#e6c453;line-height:1.6">参考音源（YouTube）で予習できます</div>
+      <div style="font-size:14px;line-height:1.85;color:#cfd4e0">各曲の「<b style="color:#e6c453">▶ 参考音源</b>」を押すと、YouTubeの参考演奏が開きます。楽譜フォルダの譜面と合わせて、練習前の予習にお役立てください。</div>
     </div>
-    <div style="display:flex;flex-direction:column;gap:10px;padding:16px;background:#141c33;border-radius:4px">
+    <ol class="songs">
+      <li class="song"><span class="song-no">1</span><div><div class="song-t">愛するデューク</div></div><a class="yt" href="https://www.youtube.com/watch?v=qIz-USUsDx8" target="_blank" rel="noopener" aria-label="愛するデューク の参考音源（YouTube）"><i></i>参考音源</a></li>
+      <li class="song"><span class="song-no">2</span><div><div class="song-t">paradise has no border</div><div class="song-n">渡會先生　指揮</div></div><a class="yt" href="https://www.youtube.com/watch?v=DzVH-eMd17s" target="_blank" rel="noopener" aria-label="paradise has no border の参考音源（YouTube）"><i></i>参考音源</a></li>
+      <li class="song"><span class="song-no">3</span><div><div class="song-t">ディスコ・パーティー</div><div class="song-n">佐土先生　指揮</div></div><a class="yt" href="https://www.youtube.com/watch?v=AHEaRoQGUCg" target="_blank" rel="noopener" aria-label="ディスコ・パーティー の参考音源（YouTube）"><i></i>参考音源</a></li>
+      <li class="song"><span class="song-no">4</span><div><div class="song-t">未来予想図Ⅱ</div><div class="song-n">小林先生　指揮</div></div><a class="yt" href="https://www.youtube.com/watch?v=N5giqdnmARQ" target="_blank" rel="noopener" aria-label="未来予想図Ⅱ の参考音源（YouTube）"><i></i>参考音源</a></li>
+      <li class="song"><span class="song-no">5</span><div><div class="song-t">詩的なアリア</div><div class="song-n">伊勢さん　ホルン協奏曲</div></div><a class="yt" href="https://www.youtube.com/watch?v=xwhJJ8Ryo8I" target="_blank" rel="noopener" aria-label="詩的なアリア の参考音源（YouTube）"><i></i>参考音源</a></li>
+      <li class="song"><span class="song-no">6</span><div><div class="song-t">オーメンズ・オブ・ラブ</div></div><a class="yt" href="https://www.youtube.com/watch?v=DHDvDA1UiKM" target="_blank" rel="noopener" aria-label="オーメンズ・オブ・ラブ の参考音源（YouTube）"><i></i>参考音源</a></li>
+    </ol>
+    <div style="display:flex;flex-direction:column;gap:4px;padding:16px;background:#141c33;border-radius:4px">
       <div style="font-size:12px;letter-spacing:.16em;color:#c9a227">アンコール</div>
-      <div style="font-size:16px;line-height:1.8">星条旗よ永遠なれ<br />宝島</div>
+      <ol class="songs">
+        <li class="song"><span class="song-no">♪</span><div><div class="song-t">星条旗よ永遠なれ</div></div><a class="yt" href="https://www.youtube.com/watch?v=pXRUFj_4NEA" target="_blank" rel="noopener" aria-label="星条旗よ永遠なれ の参考音源（YouTube）"><i></i>参考音源</a></li>
+        <li class="song"><span class="song-no">♪</span><div><div class="song-t">宝島</div></div><a class="yt" href="https://www.youtube.com/watch?v=PvX4T4S3Ouw" target="_blank" rel="noopener" aria-label="宝島 の参考音源（YouTube）"><i></i>参考音源</a></li>
+      </ol>
     </div>
   </section>
 
