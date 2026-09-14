@@ -4,54 +4,96 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>ファイナルコンサート｜登別中学校吹奏楽部</title>
-<meta name="description" content="登別中学校吹奏楽部 閉校前 最後の定期演奏会「ファイナルコンサート」。令和8年10月18日（日）登別市民会館 大ホール。第2部 OBOGステージ出演者募集中。" />
+<meta name="description" content="登別中学校吹奏楽部 閉校前 最後の定期演奏会「ファイナルコンサート」（第32回定期演奏会）。令和8年10月18日（日）登別市民会館 大ホール。入場無料。第2部 OBOGステージ出演者募集中。" />
 <meta property="og:title" content="ファイナルコンサート｜登別中学校吹奏楽部" />
-<meta property="og:description" content="令和8年10月18日（日）14:00開演／登別市民会館 大ホール。第2部 OBOGステージ 出演希望者50名達成・引き続き募集中。" />
-<meta property="og:image" content="hero.jpg" />
+<meta property="og:description" content="令和8年10月18日（日）14:00開演／登別市民会館 大ホール・入場無料。第2部 OBOGステージ 出演希望者51名・引き続き募集中。" />
+<meta property="og:image" content="https://choppermoon1623-tech.github.io/final-concert/og.jpg" />
 <meta property="og:type" content="website" />
+<meta name="theme-color" content="#bfe2f8" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@500;700;800&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet" />
 <style>
+  /* 色はここに集約（ポスターの青空・若葉・金文字・赤リボンから） */
+  :root {
+    --sky: #d7ecfa;
+    --sky-pale: #f2f9fe;
+    --cream: #fffaf0;
+    --white: #ffffff;
+    --navy: #16306a;
+    --ink: #2b3a55;
+    --sub: #5d6b82;
+    --mute: #8a95a8;
+    --line: #e1e8f0;
+    --blue: #1f6fd6;
+    --blue-dk: #0c4ea8;
+    --gold: #b8860b;
+    --gold-lt: #e8b93a;
+    --gold-pale: #fff4d6;
+    --red: #d9343f;
+    --leaf: #7cbf3c;
+    --line-green: #06c755;
+  }
   *, *::before, *::after { box-sizing: border-box; }
-  body { margin: 0; background: #0d1220; color: #e8e6e0; font-family: 'Zen Kaku Gothic New', sans-serif; -webkit-font-smoothing: antialiased; }
-  h1, h2 { margin: 0; font-family: 'Shippori Mincho B1', serif; }
-  a { color: #c9a227; }
-  a:hover { color: #e6c453; }
+  body { margin: 0; background: linear-gradient(180deg, #bfe2f8 0%, var(--sky) 40%, #eaf5fc 100%) fixed; color: var(--ink); font-family: 'Zen Kaku Gothic New', sans-serif; -webkit-font-smoothing: antialiased; }
+  h1, h2 { margin: 0; font-family: 'Shippori Mincho B1', serif; color: var(--navy); }
+  a { color: var(--blue); }
+  a:hover { color: var(--blue-dk); }
+  b.em { color: var(--blue-dk); }
   .wrap { min-height: 100vh; display: flex; justify-content: center; }
-  .page { width: 100%; max-width: 560px; background: #11172a; box-shadow: 0 0 80px rgba(0,0,0,.6); }
+  .page { width: 100%; max-width: 560px; background: var(--white); box-shadow: 0 0 60px rgba(40,100,160,.18); }
   .sec { padding: 40px 24px; display: flex; flex-direction: column; gap: 20px; }
+  .sec.sky { background: var(--sky-pale); }
+  .sec.cream { background: var(--cream); }
   .rule { display: flex; align-items: center; gap: 12px; }
-  .rule span { width: 22px; height: 1px; background: #c9a227; }
-  .rule h2 { font-size: 22px; font-weight: 700; letter-spacing: .08em; }
-  .row { display: grid; grid-template-columns: 76px 1fr; gap: 12px; padding: 14px 0; border-bottom: 1px solid rgba(255,255,255,.08); }
-  .row dt { font-size: 13px; color: #8b93a8; padding-top: 3px; }
-  .row dd { margin: 0; font-size: 16px; line-height: 1.7; }
-  .btn { display: block; text-align: center; padding: 18px; background: #c9a227; color: #0d1220; font-size: 17px; font-weight: 700; letter-spacing: .06em; text-decoration: none; border-radius: 4px; }
-  .btn:hover { background: #e6c453; color: #0d1220; }
-  .btn.ghost { background: #0d1220; border: 1px solid rgba(201,162,39,.5); color: #e6c453; font-size: 15px; font-weight: 500; padding: 16px; }
-  .btn.ghost:hover { background: rgba(201,162,39,.12); }
-  .cd { display: grid; grid-template-columns: repeat(4,1fr); gap: 8px; }
-  .cd div { display: flex; flex-direction: column; align-items: center; gap: 6px; padding: 14px 4px; background: #141c33; border: 1px solid rgba(201,162,39,.2); border-radius: 4px; }
-  .cd b { font-family: 'Shippori Mincho B1', serif; font-size: 32px; line-height: 1; color: #e6c453; font-variant-numeric: tabular-nums; font-weight: 700; }
-  .cd small { font-size: 11px; letter-spacing: .14em; color: #8b93a8; }
-  .faq { display: flex; flex-direction: column; gap: 9px; padding-bottom: 20px; border-bottom: 1px solid rgba(255,255,255,.08); }
-  .qa { display: grid; grid-template-columns: 20px 1fr; gap: 10px; }
-  .qa .m { font-family: 'Shippori Mincho B1', serif; font-size: 15px; color: #c9a227; line-height: 1.7; }
-  .body { font-size: 15px; line-height: 1.95; color: #cfd4e0; text-wrap: pretty; }
+  .rule::before { content: ""; width: 10px; height: 10px; background: var(--leaf); border-radius: 0 60% 0 60%; transform: rotate(-10deg); flex: none; }
+  .rule::after { content: ""; flex: 1; height: 1px; background: linear-gradient(90deg, var(--gold-lt), rgba(232,185,58,0)); }
+  .rule h2 { font-size: 22px; font-weight: 800; letter-spacing: .08em; }
+  .note { font-size: 13px; color: var(--sub); line-height: 1.8; margin-top: -8px; }
+  .row { display: grid; grid-template-columns: 76px 1fr; gap: 12px; padding: 14px 0; border-bottom: 1px solid var(--line); }
+  .row:last-child { border-bottom: none; }
+  .row dt { font-size: 13px; color: var(--mute); padding-top: 3px; }
+  .row dd { margin: 0; font-size: 16px; line-height: 1.7; color: var(--navy); }
+  .row dd small { display: block; font-size: 13px; color: var(--sub); }
+  .free { display: inline-block; padding: 2px 12px; font-weight: 700; color: var(--blue-dk); border: 1.5px solid var(--gold-lt); border-radius: 3px; background: var(--gold-pale); letter-spacing: .12em; }
+  .btn { display: block; text-align: center; padding: 18px; background: linear-gradient(100deg, var(--blue) 0%, var(--blue-dk) 100%); color: #fff; font-size: 17px; font-weight: 700; letter-spacing: .06em; text-decoration: none; border-radius: 6px; box-shadow: 0 6px 18px rgba(31,111,214,.25); }
+  .btn:hover { color: #fff; filter: brightness(1.08); }
+  .btn.ghost { background: var(--white); border: 1.5px solid rgba(31,111,214,.45); color: var(--blue-dk); font-size: 15px; font-weight: 500; padding: 16px; box-shadow: none; }
+  .btn.ghost:hover { background: #eef5fe; filter: none; }
+  .box { padding: 14px 16px; background: var(--gold-pale); border: 1px solid rgba(232,185,58,.6); border-radius: 6px; display: flex; flex-direction: column; gap: 6px; }
+  .box-t { font-size: 15px; font-weight: 700; color: var(--navy); line-height: 1.6; }
+  .box-b { font-size: 14px; line-height: 1.85; color: var(--ink); }
+  .body { font-size: 15px; line-height: 1.95; color: var(--ink); text-wrap: pretty; }
+  .ribbon { align-self: flex-start; position: relative; font-size: 12px; letter-spacing: .16em; color: #fff; background: linear-gradient(180deg, #e8505a, var(--red)); padding: 6px 20px; font-weight: 700; clip-path: polygon(0 0, 100% 0, calc(100% - 8px) 50%, 100% 100%, 0 100%, 8px 50%); }
   @keyframes rise { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+
+  /* ヒーロー（ポスターのタイトルをそのまま使う） */
+  .hero { margin: 0; line-height: 0; background: #cfe9fb; }
+  .hero img { display: block; width: 100%; height: auto; }
+  .lead { padding: 22px 24px 30px; background: linear-gradient(180deg, #e3f2fc 0%, var(--white) 100%); text-align: center; display: flex; flex-direction: column; gap: 12px; animation: rise .6s ease both; }
+  .lead-k { font-family: 'Shippori Mincho B1', serif; font-size: 15px; letter-spacing: .1em; color: var(--sub); }
+  .lead-m { font-size: 16px; line-height: 1.9; color: var(--navy); font-weight: 500; }
+
+  /* 開演まで */
+  .cdsec { padding: 30px 24px; background: var(--sky-pale); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+  .cd { display: grid; grid-template-columns: repeat(4,1fr); gap: 8px; }
+  .cd div { display: flex; flex-direction: column; align-items: center; gap: 6px; padding: 14px 4px; background: var(--white); border: 1px solid #cfe2f3; border-radius: 8px; box-shadow: 0 2px 8px rgba(31,111,214,.07); }
+  .cd b { font-family: 'Shippori Mincho B1', serif; font-size: 32px; line-height: 1; color: var(--blue-dk); font-variant-numeric: tabular-nums; font-weight: 800; }
+  .cd small { font-size: 11px; letter-spacing: .14em; color: var(--sub); }
 
   /* 曲目（曲順＋参考音源） */
   .songs { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; }
-  .song { display: grid; grid-template-columns: 30px 1fr auto; gap: 12px; align-items: center; padding: 14px 0; border-bottom: 1px solid rgba(255,255,255,.08); }
+  .song { display: grid; grid-template-columns: 30px 1fr auto; gap: 12px; align-items: center; padding: 14px 0; border-bottom: 1px solid var(--line); }
   .song:last-child { border-bottom: none; }
-  .song-no { font-family: 'Shippori Mincho B1', serif; font-size: 24px; font-weight: 800; line-height: 1; color: #c9a227; text-align: center; font-variant-numeric: tabular-nums; }
-  .song-t { font-size: 16px; line-height: 1.6; }
-  .song-n { font-size: 13px; line-height: 1.7; color: #a9b0c4; margin-top: 2px; }
-  .yt { display: inline-flex; align-items: center; gap: 7px; padding: 8px 12px; font-size: 13px; font-weight: 700; color: #e8e6e0; white-space: nowrap; text-decoration: none; background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.18); border-radius: 999px; }
-  .yt:hover { color: #fff; background: rgba(255,0,51,.18); border-color: rgba(255,0,51,.6); }
+  .song-no { font-family: 'Shippori Mincho B1', serif; font-size: 24px; font-weight: 800; line-height: 1; color: var(--gold); text-align: center; font-variant-numeric: tabular-nums; }
+  .song-t { font-size: 16px; line-height: 1.6; color: var(--navy); }
+  .song-n { font-size: 13px; line-height: 1.7; color: var(--sub); margin-top: 2px; }
+  .yt { display: inline-flex; align-items: center; gap: 7px; padding: 8px 12px; font-size: 13px; font-weight: 700; color: var(--ink); white-space: nowrap; text-decoration: none; background: var(--white); border: 1px solid #d5dde8; border-radius: 999px; }
+  .yt:hover { color: #c8102e; background: #fff0f2; border-color: rgba(255,0,51,.5); }
   .yt i { width: 20px; height: 14px; border-radius: 4px; background: #ff0033; position: relative; flex: none; }
   .yt i::after { content: ""; position: absolute; left: 8px; top: 4px; border-style: solid; border-width: 3px 0 3px 5px; border-color: transparent transparent transparent #fff; }
+  .encore { display: flex; flex-direction: column; gap: 4px; padding: 16px; background: var(--sky-pale); border-radius: 8px; }
+  .encore-k { font-size: 12px; letter-spacing: .16em; color: var(--gold); font-weight: 700; }
   @media (max-width: 400px) {
     .song { grid-template-columns: 20px 1fr auto; gap: 10px; }
     .song-no { font-size: 21px; }
@@ -59,121 +101,180 @@
     .yt { gap: 5px; padding: 7px 9px; font-size: 12px; }
   }
 
-  /* 祝50名達成 */
-  .fifty { position: relative; overflow: hidden; padding: 40px 24px 36px; background: radial-gradient(120% 90% at 50% 38%, #2a2410 0%, #161a26 55%, #0d1220 100%); border-bottom: 1px solid rgba(201,162,39,.35); text-align: center; }
-  .fifty::before { content: ""; position: absolute; left: 50%; top: 40%; width: 720px; height: 720px; margin: -360px 0 0 -360px; background: repeating-conic-gradient(rgba(230,196,83,.10) 0deg 7deg, transparent 7deg 20deg); -webkit-mask: radial-gradient(circle, #000 12%, transparent 62%); mask: radial-gradient(circle, #000 12%, transparent 62%); animation: rays 40s linear infinite; pointer-events: none; }
-  .fifty::after { content: ""; position: absolute; inset: 10px; border: 1px solid rgba(201,162,39,.35); border-radius: 4px; pointer-events: none; }
+  /* ポスターのダウンロード */
+  .poster { display: grid; grid-template-columns: 150px 1fr; gap: 18px; align-items: start; }
+  .poster-img { display: block; border-radius: 4px; overflow: hidden; box-shadow: 0 8px 22px rgba(22,48,106,.2); border: 1px solid var(--line); }
+  .poster-img img { display: block; width: 100%; height: auto; }
+  .poster-dl { display: flex; flex-direction: column; gap: 10px; }
+  .dl { display: flex; align-items: center; gap: 12px; padding: 13px 14px; text-decoration: none; background: var(--white); border: 1.5px solid rgba(31,111,214,.4); border-radius: 8px; color: var(--navy); }
+  .dl:hover { background: #eef5fe; color: var(--navy); }
+  .dl-ic { flex: none; width: 38px; height: 38px; display: grid; place-items: center; border-radius: 6px; font-size: 11px; font-weight: 700; letter-spacing: .04em; color: #fff; background: var(--blue); }
+  .dl.pdf .dl-ic { background: var(--red); }
+  .dl-t { font-size: 15px; font-weight: 700; line-height: 1.4; }
+  .dl-s { font-size: 12px; color: var(--sub); line-height: 1.5; }
+  @media (max-width: 420px) {
+    .poster { grid-template-columns: 1fr; }
+    .poster-img { width: 62%; margin: 0 auto; }
+  }
+
+  /* 祝50名突破 */
+  .fifty { position: relative; overflow: hidden; padding: 40px 24px 36px; background: radial-gradient(120% 90% at 50% 40%, #fff7da 0%, #fdfbf2 45%, #e6f3fc 100%); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); text-align: center; }
+  .fifty::before { content: ""; position: absolute; left: 50%; top: 42%; width: 720px; height: 720px; margin: -360px 0 0 -360px; background: repeating-conic-gradient(rgba(232,185,58,.16) 0deg 7deg, transparent 7deg 20deg); -webkit-mask: radial-gradient(circle, #000 12%, transparent 62%); mask: radial-gradient(circle, #000 12%, transparent 62%); animation: rays 40s linear infinite; pointer-events: none; }
+  .fifty::after { content: ""; position: absolute; inset: 10px; border: 1px solid rgba(232,185,58,.55); border-radius: 6px; pointer-events: none; }
   .fifty-in { position: relative; display: flex; flex-direction: column; align-items: center; gap: 10px; }
-  .fifty-seal { width: 58px; height: 58px; display: grid; place-items: center; border: 2px solid #d0463a; border-radius: 50%; color: #e2584b; font-family: 'Shippori Mincho B1', serif; font-size: 30px; font-weight: 800; transform: rotate(-8deg); box-shadow: inset 0 0 0 3px rgba(208,70,58,.18); animation: stamp .55s cubic-bezier(.2,1.6,.4,1) .15s both; }
-  .fifty-kicker { font-family: 'Shippori Mincho B1', serif; font-size: 17px; letter-spacing: .2em; color: #e8e6e0; font-weight: 700; }
+  .fifty-seal { width: 58px; height: 58px; display: grid; place-items: center; border: 2px solid var(--red); border-radius: 50%; color: var(--red); background: rgba(255,255,255,.7); font-family: 'Shippori Mincho B1', serif; font-size: 30px; font-weight: 800; transform: rotate(-8deg); box-shadow: inset 0 0 0 3px rgba(217,52,63,.15); animation: stamp .55s cubic-bezier(.2,1.6,.4,1) .15s both; }
+  .fifty-kicker { font-family: 'Shippori Mincho B1', serif; font-size: 17px; letter-spacing: .2em; color: var(--navy); font-weight: 800; }
   .fifty-num { display: flex; align-items: baseline; justify-content: center; gap: 4px; line-height: 1; }
-  .fifty-num b { font-family: 'Shippori Mincho B1', serif; font-size: 112px; font-weight: 800; letter-spacing: .02em; font-variant-numeric: tabular-nums; background: linear-gradient(100deg, #b8901c 0%, #e6c453 30%, #fff4c7 45%, #e6c453 60%, #b8901c 100%); background-size: 250% 100%; -webkit-background-clip: text; background-clip: text; color: transparent; filter: drop-shadow(0 4px 18px rgba(201,162,39,.35)); animation: shine 3.2s ease-in-out infinite; }
-  .fifty-num span { font-family: 'Shippori Mincho B1', serif; font-size: 34px; font-weight: 800; color: #e6c453; }
-  .fifty-title { font-family: 'Shippori Mincho B1', serif; font-size: 30px; font-weight: 800; letter-spacing: .14em; color: #e6c453; margin-top: -2px; }
-  .fifty-msg { max-width: 420px; font-size: 14px; line-height: 1.9; color: #cfd4e0; }
-  .fifty-replay { margin-top: 6px; padding: 9px 18px; font: inherit; font-size: 13px; letter-spacing: .08em; color: #e6c453; background: rgba(201,162,39,.1); border: 1px solid rgba(201,162,39,.5); border-radius: 999px; cursor: pointer; }
-  .fifty-replay:hover { background: rgba(201,162,39,.2); }
-  .fifty-tag { display: inline-block; margin-left: 6px; padding: 2px 8px; font-size: 11px; letter-spacing: .1em; color: #fff; background: #d0463a; border-radius: 2px; vertical-align: 2px; }
+  .fifty-num b { font-family: 'Shippori Mincho B1', serif; font-size: 112px; font-weight: 800; letter-spacing: .02em; font-variant-numeric: tabular-nums; background: linear-gradient(100deg, #9a6d05 0%, #d9a52a 30%, #ffe9a3 45%, #d9a52a 60%, #9a6d05 100%); background-size: 250% 100%; -webkit-background-clip: text; background-clip: text; color: transparent; filter: drop-shadow(0 3px 0 rgba(255,255,255,.9)) drop-shadow(0 6px 14px rgba(184,134,11,.3)); animation: shine 3.2s ease-in-out infinite; }
+  .fifty-num span { font-family: 'Shippori Mincho B1', serif; font-size: 34px; font-weight: 800; color: var(--gold); }
+  .fifty-title { font-family: 'Shippori Mincho B1', serif; font-size: 30px; font-weight: 800; letter-spacing: .12em; margin-top: -2px; background: linear-gradient(100deg, var(--blue) 0%, var(--blue-dk) 100%); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  .fifty-msg { max-width: 420px; font-size: 14px; line-height: 1.9; color: var(--ink); }
+  .fifty-replay { margin-top: 6px; padding: 9px 18px; font: inherit; font-size: 13px; letter-spacing: .08em; color: var(--blue-dk); background: var(--white); border: 1px solid rgba(31,111,214,.45); border-radius: 999px; cursor: pointer; }
+  .fifty-replay:hover { background: #eef5fe; }
+  .fifty-tag { display: inline-block; margin-left: 6px; padding: 2px 8px; font-size: 11px; letter-spacing: .1em; color: #fff; background: var(--red); border-radius: 2px; vertical-align: 2px; }
   #confetti { position: fixed; inset: 0; width: 100%; height: 100%; pointer-events: none; z-index: 50; }
   @keyframes rays { to { transform: rotate(360deg); } }
   @keyframes shine { 0%, 100% { background-position: 100% 0; } 50% { background-position: 0% 0; } }
   @keyframes stamp { from { opacity: 0; transform: rotate(-8deg) scale(2.2); } to { opacity: 1; transform: rotate(-8deg) scale(1); } }
-  @media (prefers-reduced-motion: reduce) { .fifty::before, .fifty-num b, .fifty-seal { animation: none; } }
+  @media (prefers-reduced-motion: reduce) { .fifty::before, .fifty-num b, .fifty-seal, .lead { animation: none; } }
+
+  /* OBOGステージ */
+  .stage { padding: 40px 24px; background: var(--sky-pale); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); display: flex; flex-direction: column; gap: 22px; }
+  .apply { padding: 18px; background: var(--white); border: 1px solid #cfe2f3; border-radius: 8px; display: flex; flex-direction: column; gap: 8px; box-shadow: 0 4px 14px rgba(31,111,214,.07); }
+  .apply-k { font-size: 12px; letter-spacing: .16em; color: var(--gold); font-weight: 700; }
+  .count { margin-top: 4px; display: flex; align-items: center; gap: 14px; padding: 16px 18px; background: linear-gradient(100deg, var(--blue) 0%, var(--blue-dk) 100%); border-radius: 8px; color: #fff; }
+  .count b { font-family: 'Shippori Mincho B1', serif; font-size: 46px; font-weight: 800; letter-spacing: .02em; font-variant-numeric: tabular-nums; color: #ffe9a3; }
+  .later { margin-top: 4px; padding: 14px 16px; background: var(--gold-pale); border: 1px dashed rgba(184,134,11,.5); border-radius: 6px; display: flex; flex-direction: column; gap: 6px; }
+  .later .sep { padding-top: 8px; border-top: 1px dashed rgba(184,134,11,.4); }
+  .line-note { padding: 14px 16px; background: #e9f9ef; border: 1px solid rgba(6,199,85,.55); border-radius: 6px; font-size: 14px; line-height: 1.85; color: var(--ink); }
+  .line-note b, .line-note a { color: #04843a; }
+
+  /* よくある質問 */
+  .faq { display: flex; flex-direction: column; gap: 9px; padding-bottom: 20px; border-bottom: 1px solid var(--line); }
+  .faq:last-child { border-bottom: none; }
+  .qa { display: grid; grid-template-columns: 20px 1fr; gap: 10px; }
+  .qa .m { font-family: 'Shippori Mincho B1', serif; font-size: 15px; font-weight: 800; color: var(--blue); line-height: 1.7; }
+  .qa .m.a { color: var(--gold); }
+  .qa .q { font-size: 16px; font-weight: 700; line-height: 1.7; color: var(--navy); }
+
+  /* LINEグループ */
+  .line { padding: 44px 24px; background: #eafaf0; border-top: 2px solid var(--line-green); border-bottom: 2px solid var(--line-green); display: flex; flex-direction: column; gap: 20px; }
+  .line h2 { font-size: 26px; font-weight: 800; letter-spacing: .05em; line-height: 1.45; }
+  .line .tag { align-self: flex-start; font-size: 12px; letter-spacing: .16em; color: #fff; background: var(--line-green); padding: 6px 14px; border-radius: 2px; font-weight: 700; }
+  .line-btn { display: block; text-align: center; padding: 22px 18px; background: var(--line-green); color: #fff; font-size: 19px; font-weight: 800; letter-spacing: .04em; text-decoration: none; border-radius: 8px; box-shadow: 0 6px 20px rgba(6,199,85,.3); }
+  .line-btn:hover { color: #fff; filter: brightness(1.05); }
+  .line-flow { display: flex; flex-direction: column; gap: 8px; padding: 16px; background: var(--white); border-radius: 6px; }
+
+  /* 顧問の先生方 */
+  .teacher { display: grid; grid-template-columns: 22px 1fr; gap: 10px; align-items: baseline; padding: 13px 0; border-bottom: 1px solid var(--line); }
+  .teacher:last-child { border-bottom: none; }
+  .teacher .dot { width: 9px; height: 9px; border-radius: 50%; background: var(--gold-lt); }
+  .teacher .n { font-size: 17px; font-weight: 700; line-height: 1.6; color: var(--navy); }
+  .teacher .r { font-size: 13px; line-height: 1.7; color: var(--sub); margin-top: 3px; }
+
+  .closing { padding: 52px 24px; background: linear-gradient(180deg, var(--white) 0%, #e6f3fc 100%); display: flex; flex-direction: column; gap: 20px; text-align: center; align-items: center; }
+  footer { padding: 26px 24px 40px; background: #e6f3fc; border-top: 1px solid #cfe2f3; text-align: center; font-size: 12px; line-height: 2; color: var(--sub); }
 </style>
 </head>
 <body>
 <div class="wrap"><div class="page">
 
-  <div style="position:relative;overflow:hidden;background:#0a0e18">
-    <img src="hero.jpg" alt="" style="display:block;width:100%;height:auto" />
-    <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,14,24,.55) 0%,rgba(10,14,24,.15) 38%,rgba(17,23,42,.85) 82%,#11172a 100%)"></div>
-  </div>
+  <h1 class="hero"><img src="title.jpg" width="1400" height="455" alt="登別市立登別中学校吹奏楽部 ファイナルコンサート 第32回定期演奏会 ― 登別中学校吹奏楽部最後の演奏会。ありがとうを音楽にのせて。" /></h1>
 
-  <header style="padding:32px 24px 40px;background:#11172a;border-bottom:1px solid rgba(201,162,39,.25);display:flex;flex-direction:column;gap:20px;animation:rise .6s ease both">
-    <div style="font-size:13px;letter-spacing:.28em;color:#c9a227;font-weight:700">NOBORIBETSU JHS BAND · OB/OG</div>
-    <div style="display:flex;flex-direction:column;gap:10px">
-      <div style="font-family:'Shippori Mincho B1',serif;font-size:15px;letter-spacing:.1em;color:#a9b0c4">登別中学校吹奏楽部　閉校前 最後の定期演奏会</div>
-      <h1 style="font-size:44px;line-height:1.25;font-weight:800;letter-spacing:.04em">ファイナル<br />コンサート</h1>
-    </div>
-    <div style="height:1px;background:linear-gradient(90deg,#c9a227,rgba(201,162,39,0))"></div>
-    <div style="font-size:16px;line-height:1.9;color:#cfd4e0">いつかの音を、もう一度みんなで。<br />最後の定期演奏会に、ぜひ集まってください。</div>
+  <header class="lead">
+    <div class="lead-k">閉校前 最後の定期演奏会<br />OB・OGのみなさんへ</div>
+    <div class="lead-m">いつかの音を、もう一度みんなで。<br />最後の定期演奏会に、ぜひ集まってください。</div>
   </header>
 
-  <section class="fifty" aria-label="出演希望者50名達成">
+  <section class="fifty" aria-label="出演希望者50名突破">
     <div class="fifty-in">
       <div class="fifty-seal" aria-hidden="true">祝</div>
       <div class="fifty-kicker">OBOGステージ 出演希望者</div>
-      <div class="fifty-num"><b id="fifty-n">50</b><span>名</span></div>
-      <div class="fifty-title">達成！</div>
-      <div class="fifty-msg">たくさんのお申し込み、本当にありがとうございます。<br />出演者は<b style="color:#e6c453">10月11日（日）まで引き続き募集中</b>です。<br />みんなで、最後のステージを大きく鳴らしましょう。</div>
+      <div class="fifty-num"><b id="fifty-n">51</b><span>名</span></div>
+      <div class="fifty-title">50名突破！</div>
+      <div class="fifty-msg">たくさんのお申し込み、本当にありがとうございます。<br />出演者は<b class="em">10月11日（日）まで引き続き募集中</b>です。<br />みんなで、最後のステージを大きく鳴らしましょう。</div>
       <button type="button" class="fifty-replay" id="fifty-replay">🎉 もう一度お祝いする</button>
     </div>
   </section>
 
-  <section style="padding:32px 24px;background:#0d1220;border-bottom:1px solid rgba(255,255,255,.06)">
-    <div style="font-size:12px;letter-spacing:.22em;color:#8b93a8;text-align:center;margin-bottom:18px">開演まで</div>
+  <section class="cdsec">
+    <div style="font-size:12px;letter-spacing:.22em;color:var(--sub);text-align:center;margin-bottom:18px">開演まで</div>
     <div class="cd">
       <div><b id="cd-d">—</b><small>日</small></div>
       <div><b id="cd-h">—</b><small>時間</small></div>
       <div><b id="cd-m">—</b><small>分</small></div>
       <div><b id="cd-s">—</b><small>秒</small></div>
     </div>
-    <div style="margin-top:14px;text-align:center;font-size:12px;color:#6f778c">2026年10月18日（日）14:00 開演</div>
+    <div style="margin-top:14px;text-align:center;font-size:12px;color:var(--mute)">2026年10月18日（日）14:00 開演</div>
   </section>
 
   <section class="sec">
-    <div class="rule"><span></span><h2>開催概要</h2></div>
+    <div class="rule"><h2>開催概要</h2></div>
     <dl style="margin:0;display:flex;flex-direction:column;gap:2px">
       <div class="row"><dt>日　程</dt><dd>令和8年10月18日（日）</dd></div>
       <div class="row"><dt>時　間</dt><dd>13:30 開場　／　14:00 開演</dd></div>
       <div class="row"><dt>会　場</dt><dd>登別市民会館　大ホール</dd></div>
-      <div class="row" style="border-bottom:none"><dt>演　目</dt><dd style="color:#cfd4e0">今後決定</dd></div>
+      <div class="row"><dt>入場料</dt><dd><span class="free">入場無料</span></dd></div>
+      <div class="row"><dt>構　成</dt><dd>第1部　現役生ステージ<br />第2部　OB・OG・有志との共演ステージ</dd></div>
     </dl>
   </section>
 
-  <section style="padding:40px 24px;background:#141c33;border-top:1px solid rgba(201,162,39,.2);border-bottom:1px solid rgba(201,162,39,.2);display:flex;flex-direction:column;gap:22px">
+  <section class="sec cream" id="poster">
+    <div class="rule"><h2>ポスター</h2></div>
+    <div class="note">ポスターができました。SNSやLINEでの共有、印刷しての掲示などにご自由にお使いください。</div>
+    <div class="poster">
+      <a class="poster-img" href="poster.jpg" target="_blank" rel="noopener" aria-label="ポスターを大きく表示"><img src="poster-thumb.jpg" width="800" height="1131" alt="ファイナルコンサートのポスター" loading="lazy" /></a>
+      <div class="poster-dl">
+        <a class="dl" href="poster.jpg" download="ファイナルコンサート_ポスター.jpg"><span class="dl-ic">JPG</span><span><span class="dl-t">画像でダウンロード</span><br /><span class="dl-s">LINE・SNSでの共有に（3.6MB）</span></span></a>
+        <a class="dl pdf" href="poster.pdf" download="ファイナルコンサート_ポスター_印刷用.pdf"><span class="dl-ic">PDF</span><span><span class="dl-t">印刷用PDFをダウンロード</span><br /><span class="dl-s">A判の印刷・掲示に（5.6MB）</span></span></a>
+        <div class="dl-s" style="line-height:1.8">※ ポスターを押すと大きく表示されます。スマホでは長押しで画像を保存できます。</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="stage">
     <div style="display:flex;flex-direction:column;gap:12px">
-      <div style="align-self:flex-start;font-size:12px;letter-spacing:.16em;color:#0d1220;background:#c9a227;padding:5px 12px;border-radius:2px;font-weight:700">出演者募集中（受付継続中）</div>
+      <div class="ribbon">出演者募集中（受付継続中）</div>
       <h2 style="font-size:26px;font-weight:800;letter-spacing:.06em;line-height:1.45">第2部　OBOGステージ</h2>
       <div class="body">卒業生みんなで作るステージです。ブランクがあっても大丈夫。まずは「出られそう」の一報をください。</div>
     </div>
-    <div style="padding:18px;background:rgba(201,162,39,.09);border:1px solid rgba(201,162,39,.35);border-radius:4px;display:flex;flex-direction:column;gap:8px">
-      <div style="font-size:12px;letter-spacing:.16em;color:#c9a227">出演申し込み</div>
+    <div class="apply">
+      <div class="apply-k">出演申し込み</div>
       <div style="display:flex;align-items:baseline;gap:10px;flex-wrap:wrap">
-        <s style="font-family:'Shippori Mincho B1',serif;font-size:22px;font-weight:700;letter-spacing:.03em;color:#6f778c;text-decoration-thickness:2px">9月7日（月）まで</s>
-        <span style="font-size:12px;color:#8b93a8">第一次締め切り・終了</span>
+        <s style="font-family:'Shippori Mincho B1',serif;font-size:22px;font-weight:700;letter-spacing:.03em;color:var(--mute);text-decoration-thickness:2px">9月7日（月）まで</s>
+        <span style="font-size:12px;color:var(--mute)">第一次締め切り・終了</span>
       </div>
-      <div style="font-family:'Shippori Mincho B1',serif;font-size:28px;font-weight:700;letter-spacing:.03em;color:#e6c453">10月11日（日）まで随時受付</div>
-      <div style="font-size:14px;line-height:1.85;color:#cfd4e0">9月7日は楽曲を決めるための第一次締め切りでした。曲目はこの回答をもとに決定しています。出演のお申し込みは、<b style="color:#e6c453">本番1週間前の10月11日（日）まで随時受け付けます。</b></div>
-      <div style="margin-top:4px;display:flex;align-items:center;gap:14px;padding:16px 18px;background:#c9a227;border-radius:4px;color:#0d1220">
+      <div style="font-family:'Shippori Mincho B1',serif;font-size:clamp(19px,5.4vw,28px);font-weight:800;letter-spacing:.02em;color:var(--red)">10月11日（日）まで随時受付</div>
+      <div class="box-b">9月7日は楽曲を決めるための第一次締め切りでした。曲目はこの回答をもとに決定しています。出演のお申し込みは、<b class="em">本番1週間前の10月11日（日）まで随時受け付けます。</b></div>
+      <div class="count">
         <div style="display:flex;align-items:baseline;gap:2px;line-height:1">
-          <b style="font-family:'Shippori Mincho B1',serif;font-size:46px;font-weight:800;letter-spacing:.02em;font-variant-numeric:tabular-nums">50</b>
+          <b>51</b>
           <span style="font-size:18px;font-weight:700">名</span>
         </div>
-        <div style="font-size:14px;line-height:1.7;font-weight:700">現在、50名のOBOGが<span class="fifty-tag">祝 達成</span><br />参加予定です！</div>
+        <div style="font-size:14px;line-height:1.7;font-weight:700">現在、51名のOBOGが<span class="fifty-tag">祝 50名突破</span><br />参加予定です！</div>
       </div>
-      <div style="margin-top:4px;padding:14px 16px;background:rgba(255,255,255,.05);border:1px dashed rgba(201,162,39,.5);border-radius:4px;display:flex;flex-direction:column;gap:6px">
-        <div style="font-size:15px;font-weight:700;color:#e6c453;line-height:1.6">締め切り後も、出演者は引き続き募集中です！</div>
-        <div style="font-size:14px;line-height:1.85;color:#cfd4e0">9月7日を過ぎてからのお申し込みも大歓迎です。下のフォームからいつでもご連絡ください。</div>
-        <div style="font-size:14px;line-height:1.85;color:#cfd4e0;padding-top:8px;border-top:1px dashed rgba(201,162,39,.4)"><b style="color:#e6c453">本番まで1週間を切ってからのお申し込みは、まずLINEグループまたはフォームで個別にご相談ください。</b>楽譜や練習の都合がありますので、できるかぎり対応させていただきます。</div>
-        <div style="font-size:14px;line-height:1.85;color:#cfd4e0;padding-top:8px;border-top:1px dashed rgba(201,162,39,.4)"><b style="color:#e6c453">「本番に出られるかまだ分からないけれど、出たい」という方も、ぜひお申し込みください。</b>その場合は、申し込みフォームの自由記入欄にその旨をお書き添えいただけると大変ありがたいです。人数の見込みが立てやすくなり、こちらでも準備を進められます。</div>
+      <div class="later">
+        <div class="box-t">締め切り後も、出演者は引き続き募集中です！</div>
+        <div class="box-b">9月7日を過ぎてからのお申し込みも大歓迎です。下のフォームからいつでもご連絡ください。</div>
+        <div class="box-b sep"><b class="em">本番まで1週間を切ってからのお申し込みは、まずLINEグループまたはフォームで個別にご相談ください。</b>楽譜や練習の都合がありますので、できるかぎり対応させていただきます。</div>
+        <div class="box-b sep"><b class="em">「本番に出られるかまだ分からないけれど、出たい」という方も、ぜひお申し込みください。</b>その場合は、申し込みフォームの自由記入欄にその旨をお書き添えいただけると大変ありがたいです。人数の見込みが立てやすくなり、こちらでも準備を進められます。</div>
       </div>
     </div>
     <div style="display:flex;flex-direction:column;gap:10px">
       <a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLSe4Q1MOJhccylakUwC_NAeeqYHS-kDc_FhCrncmpNDIrBAXrg/viewform" target="_blank" rel="noopener">出演申し込みフォームへ</a>
-      <a class="btn ghost" href="https://docs.google.com/spreadsheets/d/1-E_ESR6JfMf1CzrlW-EDfGUCHyv8AWRWgS8PxmumKi4/edit?usp=sharing" target="_blank" rel="noopener">出演者一覧を見る（50名）</a>
+      <a class="btn ghost" href="https://docs.google.com/spreadsheets/d/1-E_ESR6JfMf1CzrlW-EDfGUCHyv8AWRWgS8PxmumKi4/edit?usp=sharing" target="_blank" rel="noopener">出演者一覧を見る（51名）</a>
       <a class="btn ghost" href="https://drive.google.com/drive/folders/1blgGXUcS_3maS9cDL871w5d5r1MfAA32?usp=sharing" target="_blank" rel="noopener">楽譜フォルダ（Google ドライブ）</a>
     </div>
-    <div style="padding:14px 16px;background:rgba(6,199,85,.12);border:1px solid rgba(6,199,85,.55);border-radius:4px;font-size:14px;line-height:1.85;color:#dfe6e0"><b style="color:#7ee2a8">申し込みが済んだら、忘れずにLINEグループへ。</b><br />今後の連絡はすべてLINEグループで行います。<a href="#line" style="color:#7ee2a8;font-weight:700">→ LINEグループの案内はこちら</a></div>
-    <div style="font-size:13px;line-height:1.9;color:#a9b0c4">楽器の数に限りがございますので、楽器の借用希望に添えない場合がございます。また、<b style="color:#cfd4e0">譜面台をお持ちの方はご持参をお願いします</b>（学校で全員分をご用意できません）。</div>
+    <div class="line-note"><b>申し込みが済んだら、忘れずにLINEグループへ。</b><br />今後の連絡はすべてLINEグループで行います。<a href="#line" style="font-weight:700">→ LINEグループの案内はこちら</a></div>
+    <div style="font-size:13px;line-height:1.9;color:var(--sub)">楽器の数に限りがございますので、楽器の借用希望に添えない場合がございます。また、<b style="color:var(--navy)">譜面台をお持ちの方はご持参をお願いします</b>（学校で全員分をご用意できません）。</div>
   </section>
 
   <section class="sec">
-    <div class="rule"><span></span><h2>第2部の曲目</h2></div>
-    <div style="font-size:13px;color:#8b93a8;line-height:1.8;margin-top:-8px">曲順が決まりました。下の並びが本番の演奏順です。</div>
-    <div style="padding:14px 16px;background:rgba(201,162,39,.09);border:1px solid rgba(201,162,39,.35);border-radius:4px;display:flex;flex-direction:column;gap:6px">
-      <div style="font-size:15px;font-weight:700;color:#e6c453;line-height:1.6">参考音源（YouTube）で予習できます</div>
-      <div style="font-size:14px;line-height:1.85;color:#cfd4e0">各曲の「<b style="color:#e6c453">▶ 参考音源</b>」を押すと、YouTubeの参考演奏が開きます。楽譜フォルダの譜面と合わせて、練習前の予習にお役立てください。</div>
+    <div class="rule"><h2>第2部の曲目</h2></div>
+    <div class="note">曲順が決まりました。下の並びが本番の演奏順です。</div>
+    <div class="box">
+      <div class="box-t">参考音源（YouTube）で予習できます</div>
+      <div class="box-b">各曲の「<b class="em">▶ 参考音源</b>」を押すと、YouTubeの参考演奏が開きます。楽譜フォルダの譜面と合わせて、練習前の予習にお役立てください。</div>
     </div>
     <ol class="songs">
       <li class="song"><span class="song-no">1</span><div><div class="song-t">愛するデューク</div></div><a class="yt" href="https://www.youtube.com/watch?v=qIz-USUsDx8" target="_blank" rel="noopener" aria-label="愛するデューク の参考音源（YouTube）"><i></i>参考音源</a></li>
@@ -183,8 +284,8 @@
       <li class="song"><span class="song-no">5</span><div><div class="song-t">詩的なアリア</div><div class="song-n">伊勢さん　ホルン協奏曲</div></div><a class="yt" href="https://www.youtube.com/watch?v=xwhJJ8Ryo8I" target="_blank" rel="noopener" aria-label="詩的なアリア の参考音源（YouTube）"><i></i>参考音源</a></li>
       <li class="song"><span class="song-no">6</span><div><div class="song-t">オーメンズ・オブ・ラブ</div></div><a class="yt" href="https://www.youtube.com/watch?v=DHDvDA1UiKM" target="_blank" rel="noopener" aria-label="オーメンズ・オブ・ラブ の参考音源（YouTube）"><i></i>参考音源</a></li>
     </ol>
-    <div style="display:flex;flex-direction:column;gap:4px;padding:16px;background:#141c33;border-radius:4px">
-      <div style="font-size:12px;letter-spacing:.16em;color:#c9a227">アンコール</div>
+    <div class="encore">
+      <div class="encore-k">アンコール</div>
       <ol class="songs">
         <li class="song"><span class="song-no">♪</span><div><div class="song-t">星条旗よ永遠なれ</div></div><a class="yt" href="https://www.youtube.com/watch?v=pXRUFj_4NEA" target="_blank" rel="noopener" aria-label="星条旗よ永遠なれ の参考音源（YouTube）"><i></i>参考音源</a></li>
         <li class="song"><span class="song-no">♪</span><div><div class="song-t">宝島</div></div><a class="yt" href="https://www.youtube.com/watch?v=PvX4T4S3Ouw" target="_blank" rel="noopener" aria-label="宝島 の参考音源（YouTube）"><i></i>参考音源</a></li>
@@ -192,58 +293,58 @@
     </div>
   </section>
 
-  <section class="sec" style="background:#0d1220">
-    <div class="rule"><span></span><h2>練習日程</h2></div>
+  <section class="sec sky">
+    <div class="rule"><h2>練習日程</h2></div>
     <div class="body">出演者が固まりしだい決定します。日程・会場が決まりましたら、LINEグループでお知らせしますので、出演される方は必ずご登録ください。</div>
   </section>
 
-  <section class="sec" style="background:#141c33">
-    <div class="rule"><span></span><h2>当日の持ち物・服装</h2></div>
+  <section class="sec cream">
+    <div class="rule"><h2>当日の持ち物・服装</h2></div>
     <div class="body">服装や集合時間などの詳細は、練習日程とあわせてLINEグループでご案内します。楽器をお持ちの方はご持参ください。貸出をご希望の方は、申し込みフォームでお知らせください。</div>
-    <div style="padding:14px 16px;background:rgba(201,162,39,.09);border:1px solid rgba(201,162,39,.35);border-radius:4px;display:flex;flex-direction:column;gap:6px">
-      <div style="font-size:15px;font-weight:700;color:#e6c453;line-height:1.6">譜面台をお持ちの方は、ぜひご持参ください。</div>
-      <div style="font-size:14px;line-height:1.85;color:#cfd4e0">学校で全員分の譜面台をご用意することができません。ご自身の譜面台をお持ちの方は、練習・本番ともにご持参いただけますと大変助かります。ご協力をお願いいたします。</div>
+    <div class="box">
+      <div class="box-t">譜面台をお持ちの方は、ぜひご持参ください。</div>
+      <div class="box-b">学校で全員分の譜面台をご用意することができません。ご自身の譜面台をお持ちの方は、練習・本番ともにご持参いただけますと大変助かります。ご協力をお願いいたします。</div>
     </div>
   </section>
 
   <section class="sec" style="gap:22px">
-    <div class="rule"><span></span><h2>よくある質問</h2></div>
-    <div class="faq"><div class="qa"><div class="m">Q</div><div style="font-size:16px;font-weight:500;line-height:1.7">何年も楽器を触っていません。出られますか？</div></div><div class="qa"><div class="m" style="color:#6f778c">A</div><div class="body">もちろん大丈夫です。曲目は聴きなじみのある楽曲ばかりですので、まずは出演可能かどうかだけお知らせください。</div></div></div>
-    <div class="faq"><div class="qa"><div class="m">Q</div><div style="font-size:16px;font-weight:500;line-height:1.7">楽器を持っていません。借りられますか？</div></div><div class="qa"><div class="m" style="color:#6f778c">A</div><div class="body">数に限りがあるため、ご希望に添えない場合があります。申し込みフォームで借用希望をお知らせください。</div></div></div>
-    <div class="faq"><div class="qa"><div class="m">Q</div><div style="font-size:16px;font-weight:500;line-height:1.7">練習には全部出ないとだめですか？</div></div><div class="qa"><div class="m" style="color:#6f778c">A</div><div class="body">日程はこれから決めます。参加できる回だけでも構いませんので、まずはご相談ください。</div></div></div>
-    <div class="faq"><div class="qa"><div class="m">Q</div><div style="font-size:16px;font-weight:500;line-height:1.7">9月7日を過ぎてしまいました。もう間に合いませんか？</div></div><div class="qa"><div class="m" style="color:#6f778c">A</div><div class="body"><b style="color:#e6c453">まったく問題ありません。まだまだ間に合います！</b><br />9月7日はあくまで楽曲を決めるための第一次締め切りで、<b style="color:#e6c453">本番1週間前の10月11日（日）まで随時受け付けています。</b>曲目はすでに決まっていますので、楽譜フォルダからご確認いただけます。1週間を切ってからのご連絡は、まず個別にご相談ください。「今から言っても大丈夫かな」と迷っている方こそ、ぜひフォームまたはLINEグループからご連絡ください。お待ちしています。</div></div></div>
-    <div class="faq" style="border-bottom:none"><div class="qa"><div class="m">Q</div><div style="font-size:16px;font-weight:500;line-height:1.7">客席で聴くだけでも行っていいですか？</div></div><div class="qa"><div class="m" style="color:#6f778c">A</div><div class="body">ぜひお越しください。申し込みは不要です。</div></div></div>
+    <div class="rule"><h2>よくある質問</h2></div>
+    <div class="faq"><div class="qa"><div class="m">Q</div><div class="q">何年も楽器を触っていません。出られますか？</div></div><div class="qa"><div class="m a">A</div><div class="body">もちろん大丈夫です。曲目は聴きなじみのある楽曲ばかりですので、まずは出演可能かどうかだけお知らせください。</div></div></div>
+    <div class="faq"><div class="qa"><div class="m">Q</div><div class="q">楽器を持っていません。借りられますか？</div></div><div class="qa"><div class="m a">A</div><div class="body">数に限りがあるため、ご希望に添えない場合があります。申し込みフォームで借用希望をお知らせください。</div></div></div>
+    <div class="faq"><div class="qa"><div class="m">Q</div><div class="q">練習には全部出ないとだめですか？</div></div><div class="qa"><div class="m a">A</div><div class="body">日程はこれから決めます。参加できる回だけでも構いませんので、まずはご相談ください。</div></div></div>
+    <div class="faq"><div class="qa"><div class="m">Q</div><div class="q">9月7日を過ぎてしまいました。もう間に合いませんか？</div></div><div class="qa"><div class="m a">A</div><div class="body"><b class="em">まったく問題ありません。まだまだ間に合います！</b><br />9月7日はあくまで楽曲を決めるための第一次締め切りで、<b class="em">本番1週間前の10月11日（日）まで随時受け付けています。</b>曲目はすでに決まっていますので、楽譜フォルダからご確認いただけます。1週間を切ってからのご連絡は、まず個別にご相談ください。「今から言っても大丈夫かな」と迷っている方こそ、ぜひフォームまたはLINEグループからご連絡ください。お待ちしています。</div></div></div>
+    <div class="faq"><div class="qa"><div class="m">Q</div><div class="q">客席で聴くだけでも行っていいですか？</div></div><div class="qa"><div class="m a">A</div><div class="body">ぜひお越しください。入場無料・申し込みは不要です。</div></div></div>
   </section>
 
-  <section id="line" style="padding:44px 24px;background:#0f2a1e;border-top:2px solid #06c755;border-bottom:2px solid #06c755;display:flex;flex-direction:column;gap:20px">
-    <div style="align-self:flex-start;font-size:12px;letter-spacing:.16em;color:#06301c;background:#06c755;padding:6px 14px;border-radius:2px;font-weight:700">参加を決めたら必ず登録</div>
-    <h2 style="font-size:26px;font-weight:800;letter-spacing:.05em;line-height:1.45">連絡はすべて<br />LINEグループで行います</h2>
-    <div class="body" style="color:#dfe6e0">練習日程・会場・当日の集合時間や服装など、これからの大事な連絡はすべてこのグループから配信します。<b style="color:#7ee2a8">出演すると決めた方は、申し込みフォームの送信後に必ずご登録ください。</b>登録がないと連絡が届きません。</div>
-    <a style="display:block;text-align:center;padding:22px 18px;background:#06c755;color:#06301c;font-size:19px;font-weight:800;letter-spacing:.04em;text-decoration:none;border-radius:6px;box-shadow:0 6px 20px rgba(6,199,85,.28)" href="https://line.me/ti/g/E4KEGuMhTE" target="_blank" rel="noopener">▶ OB・OG連絡用 LINEグループに参加する</a>
-    <div style="display:flex;flex-direction:column;gap:8px;padding:16px;background:rgba(255,255,255,.05);border-radius:4px">
-      <div style="font-size:13px;letter-spacing:.14em;color:#7ee2a8;font-weight:700">登録の流れ</div>
-      <div style="font-size:14px;line-height:1.9;color:#cfd4e0">① 出演申し込みフォームを送信　→　② 上のボタンからLINEグループに参加　→　③ グループ内でお名前と卒業年度をひとことお知らせください。</div>
+  <section id="line" class="line">
+    <div class="tag">参加を決めたら必ず登録</div>
+    <h2>連絡はすべて<br />LINEグループで行います</h2>
+    <div class="body">練習日程・会場・当日の集合時間や服装など、これからの大事な連絡はすべてこのグループから配信します。<b style="color:#04843a">出演すると決めた方は、申し込みフォームの送信後に必ずご登録ください。</b>登録がないと連絡が届きません。</div>
+    <a class="line-btn" href="https://line.me/ti/g/E4KEGuMhTE" target="_blank" rel="noopener">▶ OB・OG連絡用 LINEグループに参加する</a>
+    <div class="line-flow">
+      <div style="font-size:13px;letter-spacing:.14em;color:#04843a;font-weight:700">登録の流れ</div>
+      <div style="font-size:14px;line-height:1.9;color:var(--ink)">① 出演申し込みフォームを送信　→　② 上のボタンからLINEグループに参加　→　③ グループ内でお名前と卒業年度をひとことお知らせください。</div>
     </div>
-    <div style="font-size:13px;line-height:1.9;color:#a9b0c4">まだ出演を迷っている方も、情報だけ受け取るために参加していただいて構いません。</div>
+    <div style="font-size:13px;line-height:1.9;color:var(--sub)">まだ出演を迷っている方も、情報だけ受け取るために参加していただいて構いません。</div>
   </section>
 
-  <section class="sec" style="background:#141c33;border-bottom:1px solid rgba(201,162,39,.2)">
-    <div class="rule"><span></span><h2>歴代の顧問の先生方</h2></div>
+  <section class="sec sky">
+    <div class="rule"><h2>歴代の顧問の先生方</h2></div>
     <div class="body">歴代の顧問の先生方にもお声がけをさせていただき、現在までに次の先生方のご出演が決まっています。</div>
     <div style="display:flex;flex-direction:column;gap:2px">
-      <div style="display:grid;grid-template-columns:22px 1fr;gap:10px;align-items:baseline;padding:13px 0;border-bottom:1px solid rgba(255,255,255,.08)"><div style="color:#c9a227;font-size:13px">●</div><div><div style="font-size:17px;font-weight:700;line-height:1.6">小林先生</div><div style="font-size:13px;line-height:1.7;color:#a9b0c4;margin-top:3px">未来予想図Ⅱ　指揮</div></div></div>
-      <div style="display:grid;grid-template-columns:22px 1fr;gap:10px;align-items:baseline;padding:13px 0;border-bottom:1px solid rgba(255,255,255,.08)"><div style="color:#c9a227;font-size:13px">●</div><div><div style="font-size:17px;font-weight:700;line-height:1.6">佐土先生</div><div style="font-size:13px;line-height:1.7;color:#a9b0c4;margin-top:3px">ディスコ・パーティー　指揮</div></div></div>
-      <div style="display:grid;grid-template-columns:22px 1fr;gap:10px;align-items:baseline;padding:13px 0"><div style="color:#c9a227;font-size:13px">●</div><div><div style="font-size:17px;font-weight:700;line-height:1.6">渡會先生</div><div style="font-size:13px;line-height:1.7;color:#a9b0c4;margin-top:3px">paradise has no border　指揮</div></div></div>
+      <div class="teacher"><div class="dot"></div><div><div class="n">小林先生</div><div class="r">未来予想図Ⅱ　指揮</div></div></div>
+      <div class="teacher"><div class="dot"></div><div><div class="n">佐土先生</div><div class="r">ディスコ・パーティー　指揮</div></div></div>
+      <div class="teacher"><div class="dot"></div><div><div class="n">渡會先生</div><div class="r">paradise has no border　指揮</div></div></div>
     </div>
   </section>
 
-  <section style="padding:52px 24px;background:#0d1220;display:flex;flex-direction:column;gap:20px;text-align:center;align-items:center">
-    <div style="width:36px;height:1px;background:#c9a227"></div>
-    <h2 style="font-size:21px;font-weight:700;letter-spacing:.1em">閉校に寄せて</h2>
+  <section class="closing">
+    <div style="width:36px;height:2px;background:var(--gold-lt)"></div>
+    <h2 style="font-size:21px;font-weight:800;letter-spacing:.1em">閉校に寄せて</h2>
     <div class="body" style="line-height:2.1;max-width:400px">何十年ぶんもの音が、この学校の音楽室から生まれました。最後の一日を、当時のままの顔ぶれで鳴らしきりましょう。思い出やメッセージは、LINEグループでぜひ聞かせてください。</div>
   </section>
 
-  <footer style="padding:28px 24px 44px;background:#0d1220;border-top:1px solid rgba(255,255,255,.08);text-align:center;font-size:12px;line-height:2;color:#6f778c">登別中学校吹奏楽部</footer>
+  <footer>登別中学校吹奏楽部</footer>
 
 </div></div>
 <script>
@@ -259,16 +360,16 @@
   tick();
   setInterval(tick, 1000);
 
-  // 祝50名達成：数字のカウントアップと紙吹雪
+  // 祝50名突破：数字のカウントアップと紙吹雪
   (function () {
-    var GOAL = 50;
+    var GOAL = 51;
     var reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
     var numEl = document.getElementById('fifty-n');
     if (!reduce) numEl.textContent = '0';
 
     function countUp() {
       if (reduce) { numEl.textContent = GOAL; return; }
-      // タブが裏にあっても最後は必ず50で止まるよう、時刻ベースのタイマーで数える
+      // タブが裏にあっても最後は必ず目標の人数で止まるよう、時刻ベースのタイマーで数える
       var start = Date.now(), dur = 1400;
       clearInterval(countUp.timer);
       countUp.timer = setInterval(function () {
@@ -282,7 +383,8 @@
     canvas.id = 'confetti';
     document.body.appendChild(canvas);
     var ctx = canvas.getContext('2d');
-    var colors = ['#c9a227', '#e6c453', '#fff4c7', '#d0463a', '#f5efe0', '#8fa8d8'];
+    // ポスターの色：金・空色・青・赤リボン・若葉
+    var colors = ['#e8b93a', '#ffd966', '#5db4f0', '#1f6fd6', '#d9343f', '#8fcf4a'];
     var pieces = [], running = false;
 
     function resize() {
@@ -335,7 +437,7 @@
 
     function celebrate() { countUp(); burst(); }
     document.getElementById('fifty-replay').addEventListener('click', celebrate);
-    // バナーが画面に入ったら一度だけお祝い（スマホでは写真の下にあるため）
+    // バナーが画面に入ったら一度だけお祝い（スマホではタイトル画像の下にあるため）
     if ('IntersectionObserver' in window) {
       var io = new IntersectionObserver(function (es) {
         if (es[0].isIntersecting) { io.disconnect(); setTimeout(celebrate, 250); }
