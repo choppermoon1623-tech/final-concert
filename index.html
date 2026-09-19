@@ -35,6 +35,8 @@
     --line-green: #06c755;
   }
   *, *::before, *::after { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  #sched { scroll-margin-top: 12px; }
   body { margin: 0; background: linear-gradient(180deg, #bfe2f8 0%, var(--sky) 40%, #eaf5fc 100%) fixed; color: var(--ink); font-family: 'Zen Kaku Gothic New', sans-serif; -webkit-font-smoothing: antialiased; }
   h1, h2 { margin: 0; font-family: 'Shippori Mincho B1', serif; color: var(--navy); }
   a { color: var(--blue); }
@@ -117,6 +119,19 @@
     .poster-img { width: 62%; margin: 0 auto; }
   }
 
+  /* お知らせバー（練習日程へ） */
+  .newsbar { display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 14px; margin: 0; padding: 16px 20px; text-decoration: none; background: linear-gradient(100deg, #fffbe9 0%, var(--gold-pale) 100%); border-top: 1px solid rgba(232,185,58,.7); border-bottom: 1px solid rgba(232,185,58,.7); color: var(--navy); }
+  .newsbar:hover { color: var(--navy); background: linear-gradient(100deg, #fff8dc 0%, #ffeec0 100%); }
+  .newsbar-badge { flex: none; padding: 5px 11px; font-family: 'Shippori Mincho B1', serif; font-size: 13px; font-weight: 800; letter-spacing: .06em; color: #fff; background: linear-gradient(180deg, #e8505a, var(--red)); border-radius: 3px; box-shadow: 0 2px 8px rgba(217,52,63,.3); animation: newpulse 2.4s ease-in-out infinite; }
+  .newsbar-t { display: block; font-size: 17px; font-weight: 800; line-height: 1.5; letter-spacing: .02em; }
+  .newsbar-s { display: block; font-size: 12.5px; line-height: 1.7; color: var(--sub); margin-top: 3px; }
+  .newsbar-ar { flex: none; width: 26px; height: 26px; display: grid; place-items: center; border-radius: 50%; background: var(--white); border: 1px solid rgba(184,134,11,.5); color: var(--gold); font-size: 13px; font-weight: 700; }
+  @keyframes newpulse { 0%, 100% { transform: none; } 50% { transform: scale(1.07); } }
+  @media (max-width: 400px) {
+    .newsbar { gap: 10px; padding: 14px 16px; }
+    .newsbar-t { font-size: 15.5px; }
+  }
+
   /* 祝50名突破 */
   .fifty { position: relative; overflow: hidden; padding: 40px 24px 36px; background: radial-gradient(120% 90% at 50% 40%, #fff7da 0%, #fdfbf2 45%, #e6f3fc 100%); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); text-align: center; }
   .fifty::before { content: ""; position: absolute; left: 50%; top: 42%; width: 720px; height: 720px; margin: -360px 0 0 -360px; background: repeating-conic-gradient(rgba(232,185,58,.16) 0deg 7deg, transparent 7deg 20deg); -webkit-mask: radial-gradient(circle, #000 12%, transparent 62%); mask: radial-gradient(circle, #000 12%, transparent 62%); animation: rays 40s linear infinite; pointer-events: none; }
@@ -136,7 +151,7 @@
   @keyframes rays { to { transform: rotate(360deg); } }
   @keyframes shine { 0%, 100% { background-position: 100% 0; } 50% { background-position: 0% 0; } }
   @keyframes stamp { from { opacity: 0; transform: rotate(-8deg) scale(2.2); } to { opacity: 1; transform: rotate(-8deg) scale(1); } }
-  @media (prefers-reduced-motion: reduce) { .fifty::before, .fifty-num b, .fifty-seal, .lead { animation: none; } }
+  @media (prefers-reduced-motion: reduce) { .fifty::before, .fifty-num b, .fifty-seal, .lead, .newsbar-badge { animation: none; } }
 
   /* OBOGステージ */
   .stage { padding: 40px 24px; background: var(--sky-pale); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); display: flex; flex-direction: column; gap: 22px; }
@@ -207,6 +222,15 @@
     <div class="lead-k">閉校前 最後の定期演奏会<br />OB・OGのみなさんへ</div>
     <div class="lead-m">いつかの音を、もう一度みんなで。<br />最後の定期演奏会に、ぜひ集まってください。</div>
   </header>
+
+  <a class="newsbar" href="#sched">
+    <span class="newsbar-badge">New!!</span>
+    <span>
+      <span class="newsbar-t">練習日程が決まりました</span>
+      <span class="newsbar-s">9月26日（土）〜 本番10月18日（日）／9月29日（火）は伊勢さん来校</span>
+    </span>
+    <span class="newsbar-ar" aria-hidden="true">›</span>
+  </a>
 
   <section class="fifty" aria-label="出演希望者50名突破">
     <div class="fifty-in">
