@@ -149,6 +149,28 @@
   .line-note { padding: 14px 16px; background: #e9f9ef; border: 1px solid rgba(6,199,85,.55); border-radius: 6px; font-size: 14px; line-height: 1.85; color: var(--ink); }
   .line-note b, .line-note a { color: #04843a; }
 
+  /* 練習日程 */
+  .sched { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; }
+  .sch { display: grid; grid-template-columns: 58px 1fr; gap: 14px; padding: 14px 0; border-bottom: 1px solid var(--line); }
+  .sch:last-child { border-bottom: none; }
+  .sch-d { display: flex; flex-direction: column; align-items: center; gap: 2px; padding: 6px 0 7px; background: var(--white); border: 1px solid #cfe2f3; border-radius: 6px; }
+  .sch-d b { font-family: 'Shippori Mincho B1', serif; font-size: 19px; font-weight: 800; line-height: 1.1; color: var(--navy); font-variant-numeric: tabular-nums; }
+  .sch-d span { font-size: 11px; font-weight: 700; letter-spacing: .06em; color: var(--sub); }
+  .sch-d span.sat { color: var(--blue); }
+  .sch-d span.sun { color: var(--red); }
+  .sch-t { font-size: 16px; font-weight: 700; line-height: 1.6; color: var(--navy); font-variant-numeric: tabular-nums; }
+  .sch-n { font-size: 13px; line-height: 1.8; color: var(--sub); margin-top: 3px; }
+  .sch-tag { display: inline-block; margin-bottom: 4px; padding: 2px 9px; font-size: 11px; font-weight: 700; letter-spacing: .1em; color: #fff; background: var(--gold); border-radius: 2px; }
+  .sch.hl .sch-d { border-color: rgba(184,134,11,.55); background: var(--gold-pale); }
+  .sch.hl .sch-n { color: var(--ink); }
+  .sch.day .sch-d { border-color: rgba(217,52,63,.45); }
+  .sch.day .sch-t { color: var(--red); }
+  .visit { display: flex; flex-direction: column; gap: 10px; padding: 16px 18px; background: var(--white); border: 1px solid #cfe2f3; border-radius: 8px; }
+  .visit-k { font-size: 12px; letter-spacing: .16em; color: var(--gold); font-weight: 700; }
+  .visit ul { margin: 0; padding-left: 1.15em; display: flex; flex-direction: column; gap: 9px; }
+  .visit li { font-size: 14px; line-height: 1.85; color: var(--ink); }
+  .visit li::marker { color: var(--leaf); }
+
   /* よくある質問 */
   .faq { display: flex; flex-direction: column; gap: 9px; padding-bottom: 20px; border-bottom: 1px solid var(--line); }
   .faq:last-child { border-bottom: none; }
@@ -265,6 +287,10 @@
       <a class="btn ghost" href="https://docs.google.com/spreadsheets/d/1-E_ESR6JfMf1CzrlW-EDfGUCHyv8AWRWgS8PxmumKi4/edit?usp=sharing" target="_blank" rel="noopener">出演者一覧を見る（51名）</a>
       <a class="btn ghost" href="https://drive.google.com/drive/folders/1blgGXUcS_3maS9cDL871w5d5r1MfAA32?usp=sharing" target="_blank" rel="noopener">楽譜フォルダ（Google ドライブ）</a>
     </div>
+    <div class="box">
+      <div class="box-t">練習日程が決まりました</div>
+      <div class="box-b">9月26日（土）から本番までの練習日程を掲載しています。<a href="#sched" style="font-weight:700">→ 練習日程を見る</a></div>
+    </div>
     <div class="line-note"><b>申し込みが済んだら、忘れずにLINEグループへ。</b><br />今後の連絡はすべてLINEグループで行います。<a href="#line" style="font-weight:700">→ LINEグループの案内はこちら</a></div>
     <div style="font-size:13px;line-height:1.9;color:var(--sub)">楽器の数に限りがございますので、楽器の借用希望に添えない場合がございます。また、<b style="color:var(--navy)">譜面台をお持ちの方はご持参をお願いします</b>（学校で全員分をご用意できません）。</div>
   </section>
@@ -293,14 +319,69 @@
     </div>
   </section>
 
-  <section class="sec sky">
+  <section class="sec sky" id="sched">
     <div class="rule"><h2>練習日程</h2></div>
-    <div class="body">出演者が固まりしだい決定します。日程・会場が決まりましたら、LINEグループでお知らせしますので、出演される方は必ずご登録ください。</div>
+    <div class="body">基本的には、<b class="em">休日に行われる練習の中でOBOGステージの合奏</b>を行います。休日の練習では10:30から合奏を始める予定で、<b class="em">OBOGステージの合奏は11:00頃を目安</b>に始めたいと考えています。</div>
+    <ol class="sched">
+      <li class="sch">
+        <div class="sch-d"><b>9/26</b><span class="sat">土</span></div>
+        <div><div class="sch-t">9:00 〜 12:00</div><div class="sch-n">学校（音楽室）／ OBOGステージの合奏は11:00頃から</div></div>
+      </li>
+      <li class="sch hl">
+        <div class="sch-d"><b>9/29</b><span>火</span></div>
+        <div>
+          <span class="sch-tag">伊勢さん来校</span>
+          <div class="sch-t">15:30 〜 17:30</div>
+          <div class="sch-n">伊勢さんが帰省のため来校されます。この日は<b class="em">OBOGステージの合奏</b>にあて、<b class="em">「詩的なアリア」を中心に合奏</b>したいと考えています。ご都合のつくOBOGの方のご参加をお待ちしています。</div>
+        </div>
+      </li>
+      <li class="sch">
+        <div class="sch-d"><b>10/4</b><span class="sun">日</span></div>
+        <div><div class="sch-t">9:00 〜 12:00</div><div class="sch-n">学校（音楽室）／ OBOGステージの合奏は11:00頃から</div></div>
+      </li>
+      <li class="sch">
+        <div class="sch-d"><b>10/10</b><span class="sat">土</span></div>
+        <div><div class="sch-t">9:00 〜 12:00</div><div class="sch-n">学校（音楽室）／ OBOGステージの合奏は11:00頃から</div></div>
+      </li>
+      <li class="sch">
+        <div class="sch-d"><b>10/11</b><span class="sun">日</span></div>
+        <div><div class="sch-t">9:00 〜 12:00</div><div class="sch-n">学校（音楽室）／ OBOGステージの合奏は11:00頃から</div></div>
+      </li>
+      <li class="sch">
+        <div class="sch-d"><b>10/17</b><span class="sat">土</span></div>
+        <div>
+          <span class="sch-tag">前日練習</span>
+          <div class="sch-t">登別市民会館</div>
+          <div class="sch-n">OBOGステージの練習時間は<b class="em">15:00から</b>の予定です。</div>
+        </div>
+      </li>
+      <li class="sch day">
+        <div class="sch-d"><b>10/18</b><span class="sun">日</span></div>
+        <div>
+          <div class="sch-t">本番　14:00 開演</div>
+          <div class="sch-n">午前中にリハーサルを行います。集合時間などはLINEグループでご案内します。</div>
+        </div>
+      </li>
+    </ol>
+    <div class="box">
+      <div class="box-t">参加される日が決まったら、練習参加フォームへ</div>
+      <div class="box-b">どなたが来校されるかの目安になりますので、ご協力をお願いします。<b class="em">OBOGのグループLINEでのご連絡でも構いません。</b></div>
+    </div>
+    <a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLScVHe1jZ0sqABFFcBbmpEcEPhVHTCxu2z3Pi-RT55ELnAGIiQ/viewform" target="_blank" rel="noopener">練習参加フォームへ</a>
+    <div class="visit">
+      <div class="visit-k">来校されるときのお願い</div>
+      <ul>
+        <li><b class="em">職員玄関からお入りください。</b>鍵がかかっていますので、チャイムを押してください。また、来校者名簿へのご記入をお願いします。</li>
+        <li>休日の練習日に<b class="em">チャイムを鳴らしても誰も出ない場合</b>は、グループLINEでお知らせいただければ、合奏室から鍵を開けに参ります。</li>
+        <li><b class="em">平日は、合奏がない日でも音出し練習の場として音楽室・美術室を開放できます。</b>必要な方はLINEで参加希望の旨をお伝えいただければ、対応可能かどうかお返事します。基本的に水曜日はお休みのことが多く、そのほかの日も不規則にお休みする場合がありますので、事前にご確認をお願いします。</li>
+      </ul>
+    </div>
+    <div style="font-size:13px;line-height:1.9;color:var(--sub)">日程は変更になる場合があります。最新のご案内はLINEグループで配信しますので、出演される方は必ずご登録ください。</div>
   </section>
 
   <section class="sec cream">
     <div class="rule"><h2>当日の持ち物・服装</h2></div>
-    <div class="body">服装や集合時間などの詳細は、練習日程とあわせてLINEグループでご案内します。楽器をお持ちの方はご持参ください。貸出をご希望の方は、申し込みフォームでお知らせください。</div>
+    <div class="body">服装や当日の集合時間などの詳細は、LINEグループでご案内します。楽器をお持ちの方はご持参ください。貸出をご希望の方は、申し込みフォームでお知らせください。</div>
     <div class="box">
       <div class="box-t">譜面台をお持ちの方は、ぜひご持参ください。</div>
       <div class="box-b">学校で全員分の譜面台をご用意することができません。ご自身の譜面台をお持ちの方は、練習・本番ともにご持参いただけますと大変助かります。ご協力をお願いいたします。</div>
@@ -311,7 +392,7 @@
     <div class="rule"><h2>よくある質問</h2></div>
     <div class="faq"><div class="qa"><div class="m">Q</div><div class="q">何年も楽器を触っていません。出られますか？</div></div><div class="qa"><div class="m a">A</div><div class="body">もちろん大丈夫です。曲目は聴きなじみのある楽曲ばかりですので、まずは出演可能かどうかだけお知らせください。</div></div></div>
     <div class="faq"><div class="qa"><div class="m">Q</div><div class="q">楽器を持っていません。借りられますか？</div></div><div class="qa"><div class="m a">A</div><div class="body">数に限りがあるため、ご希望に添えない場合があります。申し込みフォームで借用希望をお知らせください。</div></div></div>
-    <div class="faq"><div class="qa"><div class="m">Q</div><div class="q">練習には全部出ないとだめですか？</div></div><div class="qa"><div class="m a">A</div><div class="body">日程はこれから決めます。参加できる回だけでも構いませんので、まずはご相談ください。</div></div></div>
+    <div class="faq"><div class="qa"><div class="m">Q</div><div class="q">練習には全部出ないとだめですか？</div></div><div class="qa"><div class="m a">A</div><div class="body">いいえ、参加できる回だけで構いません。日程は<a href="#sched" style="font-weight:700">練習日程</a>をご覧ください。参加される日が決まったら、練習参加フォームかグループLINEでお知らせいただけると助かります。</div></div></div>
     <div class="faq"><div class="qa"><div class="m">Q</div><div class="q">9月7日を過ぎてしまいました。もう間に合いませんか？</div></div><div class="qa"><div class="m a">A</div><div class="body"><b class="em">まったく問題ありません。まだまだ間に合います！</b><br />9月7日はあくまで楽曲を決めるための第一次締め切りで、<b class="em">本番1週間前の10月11日（日）まで随時受け付けています。</b>曲目はすでに決まっていますので、楽譜フォルダからご確認いただけます。1週間を切ってからのご連絡は、まず個別にご相談ください。「今から言っても大丈夫かな」と迷っている方こそ、ぜひフォームまたはLINEグループからご連絡ください。お待ちしています。</div></div></div>
     <div class="faq"><div class="qa"><div class="m">Q</div><div class="q">客席で聴くだけでも行っていいですか？</div></div><div class="qa"><div class="m a">A</div><div class="body">ぜひお越しください。入場無料・申し込みは不要です。</div></div></div>
   </section>
